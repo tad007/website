@@ -1,0 +1,152 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            
+            nav ul {
+                flex-direction: column; /* Stack navigation items vertically */
+            }
+        }
+
+header {
+  background-color: #FF7F27;
+  color: white;
+  padding: 1rem;
+}
+
+header .logo h1 {
+  display: inline;
+  font-size: 2rem;
+
+}
+
+nav ul {
+  list-style: none;
+  display: inline;
+
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+ }
+
+nav ul li a:hover {
+  color: #ffd700;
+            /* Change the color on hover */
+}
+
+.nav-right {
+
+   text-align: right;
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h2.headertekst {
+  text-align: center;
+}
+
+main { 
+
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 80px;
+
+        }
+
+footer {
+  background-color: #FF7F27;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.x-main {
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+/* Button color for each theme */
+body.light-theme button {
+    background-color: #f0f0f0;
+}
+
+body.dark-theme button {
+    background-color: #444444;
+}
+
+
+
+
