@@ -6,16 +6,13 @@
   <title>About - My Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-document.getElementById("<id of toggle element>").onclick = function(){
- document.getElementsByTagName("body")[0].classList.toggle("dark");
-};
-</script>
+
 <body>
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <h1>Tathagata Debnath</h1>
+      <h1>Tathagata Debnath</h1>&nbsp &nbsp 
+      <button id="theme-toggle">Switch to Dark Theme</button>
     </div>
     <nav class="nav-right">
       <ul>
@@ -32,8 +29,9 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <main>
     <h2>Hobbis</h2>
     <p>Some of my hobbies include Singing, swimming, traveling and camping etc.</p>
-    <img src="images/Hiking.png" alt="Hiking" width="400" height="600" class="center"/>
-    <img src="images/singing.jpg" alt="singing" width="400" height="600" class="center"/>
+    <img src="images/Hiking.png" alt="Hiking" width="400" height="600" style="display:inline-block;"/>
+    <img src="images/singing.jpg" alt="singing" width="400" height="600" style="display:inline-block;"/>
+    <img src="images/swimming.png" alt="swimming" width="400" height="600" style="display:inline-block;"/>
     
     <p>Every now and then, I like to take a break from work to spend quality time with my family and friends. Some of my fondest memories are created during these moments, as they are often filled with laughter, connection, and shared experiences. </p>
   </main>
@@ -42,5 +40,24 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <footer>
     <p>&copy; 2025 TDN. All rights reserved.</p>
   </footer>
+  <!-- Javascript for light dark theme -->
+  <script>
+        // Check the saved theme in localStorage
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+        }
+
+        document.getElementById("theme-toggle").onclick = function() {
+            document.body.classList.toggle("dark");
+
+            // Save the theme preference in localStorage
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        };
+    </script>
+
 </body>
 </html>

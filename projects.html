@@ -15,7 +15,8 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <h1>Tathagata Debnath</h1>
+      <h1>Tathagata Debnath</h1>&nbsp &nbsp 
+  <button id="theme-toggle">Switch to Dark Theme</button>
     </div>
     <nav class="nav-right">
       <ul>
@@ -31,25 +32,27 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <!-- Main Content -->
   <main>
     <h2>Projects</h2>
-    <p>During my time at NMSU, I have worked on different types of data like: </p>
+    <p>During my time at NMSU, I have worked on different types of data like: Image Data,Big Data, and Bioinformatics Data etc.  </p>
     
-    <p>Image Data: </p>
+    
+<div>
 
-    <iframe width="420" height="315"
+    <iframe width="370" height="215"
 src="https://www.youtube.com/embed/-4E2-0sxVUM">
 </iframe>
 
-<p>Big Data: </p>
 
-<iframe width="420" height="315"
+
+<iframe width="370" height="215"
 src="https://www.youtube.com/embed/bAyrObl7TYE">
 </iframe>
 
-<p>and Bioinformatics Data: </p>
 
-<iframe width="420" height="315"
+
+<iframe width="370" height="215"
 src="https://www.youtube.com/embed/7j3atzpjh2c">
 </iframe>
+</div >
 
 <p>I have developed differnt algorithms to analyze these different types of data. They include clustering algorithms, number of cluster detection algorithms and image processing algorithms etc. </p>
 
@@ -59,5 +62,24 @@ src="https://www.youtube.com/embed/7j3atzpjh2c">
   <footer>
     <p>&copy; 2025 TDN. All rights reserved.</p>
   </footer>
+  <!-- Javascript for light dark theme -->
+  <script>
+        // Check the saved theme in localStorage
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+        }
+
+        document.getElementById("theme-toggle").onclick = function() {
+            document.body.classList.toggle("dark");
+
+            // Save the theme preference in localStorage
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        };
+    </script>
+
 </body>
 </html>

@@ -6,16 +6,13 @@
   <title>About - My Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-document.getElementById("<id of toggle element>").onclick = function(){
- document.getElementsByTagName("body")[0].classList.toggle("dark");
-};
-</script>
+
 <body>
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <h1>Tathagata Debnath</h1>
+      <h1>Tathagata Debnath</h1>&nbsp &nbsp 
+  <button id="theme-toggle">Switch to Dark Theme</button>
     </div>
     <nav class="nav-right">
       <ul>
@@ -32,10 +29,10 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <main>
     <h2>Work </h2>
     <p>Some of my publications include image processing related work, clustering related work and big data related work.</p>
-    <img src="images/ip.webp" alt="ip" width="600" height="500" class="center"/>
-    <img src="images/clustering.png" alt="clustering" width="600" height="500" class="center"/>
-    <img src="images/big_data.jpeg" alt="big_data" width="600" height="500" class="center"/>
-    <img src="images/Bioinformatics.jpg" alt="Bioinformatics" width="600" height="500" class="center"/>
+    <img src="images/ip.webp" alt="ip" width="300" height="400" tyle="display:inline-block;"/>
+    <img src="images/clustering.png" alt="clustering" width="300" height="400" tyle="display:inline-block;"/>
+    <img src="images/big_data.jpeg" alt="big_data" width="300" height="400" tyle="display:inline-block;"/>
+    <img src="images/Bioinformatics.jpg" alt="Bioinformatics" width="300" height="400" tyle="display:inline-block;"/>
 
     <p>In future, I would like to keep working on the field of Artificial Intelligence and Mechine Learning, by developing and applying new algorithms to analyze the data. This way I wuld be able to contribute to the beterment of the human society.  </p>
 
@@ -45,5 +42,24 @@ document.getElementById("<id of toggle element>").onclick = function(){
   <footer>
     <p>&copy; 2025 TDN. All rights reserved.</p>
   </footer>
+  <!-- Javascript for light dark theme -->
+  <script>
+        // Check the saved theme in localStorage
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+        }
+
+        document.getElementById("theme-toggle").onclick = function() {
+            document.body.classList.toggle("dark");
+
+            // Save the theme preference in localStorage
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        };
+    </script>
+
 </body>
 </html>
