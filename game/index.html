@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="checkers.js"></script>
+    <link rel="shortcut icon" href="imgs/" type="image/x-icon">
+</head>
+<body>
+    <h1 id="header">Checkers Game starts - Black's Turn</h1>
+    <br>
+    <div class="boardContainer">
+        <div class="board">
+            <div class="row">
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+                    
+                </div>
+            </div>
+         <div class="row">
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/black_piece.png">
+                </div>
+                <div class="tile white"></div>
+            </div>
+            <div class="row">
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+            </div>
+            <div class="row">
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+    
+                </div>
+                <div class="tile white">
+    
+                </div>
+            </div>
+            <div class="row">
+                <div class="tile white">
+                    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+            </div>
+            <div class="row">
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+                <div class="tile white">
+    
+                </div>
+                <div class="tile black">
+                    <img class="piece" src="imgs/red_piece.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <span id="black-lost">Black Lost: 0</span>
+    <button onclick="resetGame()" class="reset">Reset Game</button>
+    <span id="red-lost">Red Lost: 0</span>
+    <br>
+    
+    <p id="time">0:00:00</p>
+</body>
+</html>
